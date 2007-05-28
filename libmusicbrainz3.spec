@@ -12,8 +12,8 @@ Patch0:		%{name}-cppunit.patch
 URL:		http://www.musicbrainz.org/
 BuildRequires:	cmake
 BuildRequires:	cppunit-devel
-BuildRequires:	neon-devel
-#BuildRequires:	libdiscid-devel
+BuildRequires:	neon-devel >= 0.25
+BuildRequires:	libdiscid-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -34,8 +34,9 @@ Summary:	Headers for developing programs that will use libmusicbrainz
 Summary(pl.UTF-8):	Pliki nagłówkowe do rozwijania programów używających libmusicbrainz
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libdiscid-devel
 Requires:	libstdc++-devel
-Requires:	neon-devel
+Requires:	neon-devel >= 0.25
 
 %description devel
 This package contains the headers that programmers will need to
@@ -53,7 +54,6 @@ używających biblioteki libmusicbrainz.
 %cmake . \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DCMAKE_VERBOSE_MAKEFILE=1
-	
 
 %install
 rm -rf $RPM_BUILD_ROOT
