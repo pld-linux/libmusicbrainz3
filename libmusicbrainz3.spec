@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# for rpm autodeps
+chmod 755 $RPM_BUILD_ROOT%{_libdir}/libmusicbrainz3.so*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
