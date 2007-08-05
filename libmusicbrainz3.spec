@@ -53,7 +53,10 @@ używających biblioteki libmusicbrainz.
 %build
 %cmake . \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DCMAKE_VERBOSE_MAKEFILE=1
+	-DCMAKE_VERBOSE_MAKEFILE=1 \
+%if "%{_lib}" == "lib64"
+	-DLIB_SUFFIX=64
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
