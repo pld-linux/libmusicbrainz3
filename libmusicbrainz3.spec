@@ -2,7 +2,7 @@ Summary:	A software library for accesing MusicBrainz servers
 Summary(pl.UTF-8):	Biblioteka umożliwiająca korzystanie z serwerów MusicBrainz
 Name:		libmusicbrainz3
 Version:	3.0.1
-Release:	2
+Release:	3
 Epoch:		1
 License:	LGPL
 Group:		Libraries
@@ -33,7 +33,7 @@ oraz tworzenie indeksów z płyt CD audio.
 Summary:	Headers for developing programs that will use libmusicbrainz
 Summary(pl.UTF-8):	Pliki nagłówkowe do rozwijania programów używających libmusicbrainz
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	libdiscid-devel
 Requires:	libstdc++-devel
 Requires:	neon-devel >= 0.25
