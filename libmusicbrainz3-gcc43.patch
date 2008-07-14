@@ -1,0 +1,11 @@
+diff -urN libmusicbrainz-3.0.1/src/utils_private.cpp libmusicbrainz-3.0.1.new/src/utils_private.cpp
+--- libmusicbrainz-3.0.1/src/utils_private.cpp	2006-09-05 10:59:44.000000000 +0200
++++ libmusicbrainz-3.0.1.new/src/utils_private.cpp	2008-07-14 21:14:09.249989542 +0200
+@@ -22,6 +22,7 @@
+  
+ #include <cstring>
+ #include <cstdarg>
++#include <cstdlib>
+ #include <iostream>
+ #include <map>
+ #include <ne_uri.h> 
