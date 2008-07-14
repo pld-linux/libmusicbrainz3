@@ -2,13 +2,14 @@ Summary:	A software library for accesing MusicBrainz servers
 Summary(pl.UTF-8):	Biblioteka umożliwiająca korzystanie z serwerów MusicBrainz
 Name:		libmusicbrainz3
 Version:	3.0.1
-Release:	3
+Release:	4
 Epoch:		1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://ftp.musicbrainz.org/pub/musicbrainz/libmusicbrainz-%{version}.tar.gz
 # Source0-md5:	d42110ae548dae1eea73e83b03a1a936
 Patch0:		%{name}-cppunit.patch
+Patch1:		%{name}-gcc43.patch
 URL:		http://www.musicbrainz.org/
 BuildRequires:	cmake
 BuildRequires:	cppunit-devel
@@ -49,6 +50,7 @@ używających biblioteki libmusicbrainz.
 %prep
 %setup -q -n libmusicbrainz-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake . \
