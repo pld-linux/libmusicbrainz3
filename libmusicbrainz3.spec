@@ -1,13 +1,13 @@
 Summary:	A software library for accesing MusicBrainz servers
 Summary(pl.UTF-8):	Biblioteka umożliwiająca korzystanie z serwerów MusicBrainz
 Name:		libmusicbrainz3
-Version:	3.0.1
-Release:	5
+Version:	3.0.2
+Release:	1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://ftp.musicbrainz.org/pub/musicbrainz/libmusicbrainz-%{version}.tar.gz
-# Source0-md5:	d42110ae548dae1eea73e83b03a1a936
+# Source0-md5:	648ecd43f7b80852419aaf73702bc23f
 Patch0:		%{name}-cppunit.patch
 Patch1:		%{name}-gcc43.patch
 URL:		http://www.musicbrainz.org/
