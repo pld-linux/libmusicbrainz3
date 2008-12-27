@@ -1,6 +1,7 @@
---- libmusicbrainz-3.0.0/test/main.cpp.orig	2006-05-27 20:54:06.000000000 +0200
-+++ libmusicbrainz-3.0.0/test/main.cpp	2007-05-28 21:13:09.985711321 +0200
-@@ -1,9 +1,10 @@
+--- libmusicbrainz-3.0.2/test/main.cpp.orig	2007-07-10 20:15:23.000000000 +0200
++++ libmusicbrainz-3.0.2/test/main.cpp	2008-12-27 11:02:10.994512992 +0100
+@@ -1,10 +1,10 @@
+-#include <string>
 +//#include <string>
 +#include <cppunit/CompilerOutputter.h> 
  #include <cppunit/TestResult.h>
