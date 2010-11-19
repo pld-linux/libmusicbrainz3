@@ -1,17 +1,16 @@
 Summary:	A software library for accesing MusicBrainz servers
 Summary(pl.UTF-8):	Biblioteka umożliwiająca korzystanie z serwerów MusicBrainz
 Name:		libmusicbrainz3
-Version:	3.0.2
+Version:	3.0.3
 Release:	1
 Epoch:		1
-License:	LGPL
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	ftp://ftp.musicbrainz.org/pub/musicbrainz/libmusicbrainz-%{version}.tar.gz
-# Source0-md5:	648ecd43f7b80852419aaf73702bc23f
+# Source0-md5:	f4824d0a75bdeeef1e45cc88de7bb58a
 Patch0:		%{name}-cppunit.patch
-Patch1:		%{name}-gcc43.patch
 URL:		http://www.musicbrainz.org/
-BuildRequires:	cmake
+BuildRequires:	cmake >= 2.6
 BuildRequires:	cppunit-devel
 BuildRequires:	neon-devel >= 0.25
 BuildRequires:	libdiscid-devel
@@ -50,10 +49,11 @@ używających biblioteki libmusicbrainz.
 %prep
 %setup -q -n libmusicbrainz-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %cmake . \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
+	-DCMAKE_CXX_FLAGS_RELEASE="-DNDEBUG" \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 %if "%{_lib}" == "lib64"
