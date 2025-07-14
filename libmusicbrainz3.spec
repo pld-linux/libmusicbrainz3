@@ -48,7 +48,7 @@ używających biblioteki libmusicbrainz.
 
 %prep
 %setup -q -n libmusicbrainz-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %cmake . \
